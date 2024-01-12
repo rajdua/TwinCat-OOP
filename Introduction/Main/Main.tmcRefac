@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Refactors>
+  <Renames>
+    <RenamedType>
+      <Type guid="2708ce47-e44d-4f2c-9c52-ae80bc07d877">STARTLIGHTON_1</Type>
+      <From>StartLightOn_1</From>
+      <To>StartLightOff</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="f1ea3524-7341-4c87-8ac1-279119b14dbc">STARTLIGHTOFF_1</Type>
+      <From>StartLightOff_1</From>
+      <To>StopLightOff</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="357b58b4-6586-4552-9c1a-d33de473ab64">STARTLIGHTON_1</Type>
+      <From>StartLightOn_1</From>
+      <To>StopLightOn</To>
+    </RenamedType>
+  </Renames>
+</Refactors>

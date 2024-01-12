@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="NormallyOpenPushButton" Id="{23008e7e-5bcc-42a3-9965-5e73ef7363ea}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK NormallyOpenPushButton IMPLEMENTS I_PushButton
+
+VAR
+	Input	AT %I* : BOOL; 
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="IsPressed" Id="{2f220a47-b3de-4ebd-bcc7-8b3116a8033d}">
+      <Declaration><![CDATA[PROPERTY IsPressed : BOOL
+]]></Declaration>
+      <Get Name="Get" Id="{157cf45b-07de-492f-84cf-2f953c550b82}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IsPressed := Input;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="IsReleased" Id="{ef17f393-5d62-40b9-b096-df58a44a0395}">
+      <Declaration><![CDATA[PROPERTY IsReleased : BOOL
+]]></Declaration>
+      <Get Name="Get" Id="{5ac33980-0d1c-493b-ad46-0fb863c9929b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IsReleased := NOT IsPressed;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <LineIds Name="NormallyOpenPushButton">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="NormallyOpenPushButton.IsPressed.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="NormallyOpenPushButton.IsReleased.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

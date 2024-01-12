@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SlitterMainOperatorPanel" Id="{8c1fe4af-6777-479f-a0c2-4bd793a745fe}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'monitoring':='call'}
+FUNCTION_BLOCK SlitterMainOperatorPanel
+
+VAR
+	
+	StartPB		:		NormallyOpenPushButton;
+	StopPB		:		NormallyClosePushButton;
+	
+	StartLight	:		Light;
+	StopLight	:		Light;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="StartLightOff" Id="{2708ce47-e44d-4f2c-9c52-ae80bc07d877}">
+      <Declaration><![CDATA[METHOD PUBLIC StartLightOff : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[StartLight.Off();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="StartLightOn" Id="{1c63e6e5-e132-4e8c-9ee2-073f7e543e44}">
+      <Declaration><![CDATA[METHOD PUBLIC StartLightOn : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[StartLight.On();]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="StartPressed" Id="{4c484f6d-1915-48ba-a5b1-40543bd04621}">
+      <Declaration><![CDATA[PROPERTY PUBLIC StartPressed : Bool]]></Declaration>
+      <Get Name="Get" Id="{02f7aa8f-dfcd-45c6-92fa-1b4bf9beedc3}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[StartPressed := StartPB;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="StartReleased" Id="{31f7ee6c-7352-4a7f-abb6-8d0f67a4f4e5}">
+      <Declaration><![CDATA[PROPERTY PUBLIC StartReleased : Bool]]></Declaration>
+      <Get Name="Get" Id="{2e5a12d9-9db5-460a-83cf-8bd88952a8db}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[StartReleased := NOT StartPressed;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="StopLightOff" Id="{f1ea3524-7341-4c87-8ac1-279119b14dbc}">
+      <Declaration><![CDATA[METHOD PUBLIC StopLightOff : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[StopLight.Off();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="StopLightOn" Id="{357b58b4-6586-4552-9c1a-d33de473ab64}">
+      <Declaration><![CDATA[METHOD PUBLIC StopLightOn : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[StopLight.On();]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="StopPressed" Id="{86cd4ebf-9654-4a7a-a02f-d263ec6e9149}">
+      <Declaration><![CDATA[PROPERTY PUBLIC StopPressed : Bool]]></Declaration>
+      <Get Name="Get" Id="{39f5b4ba-a192-4107-8a03-9ad5aba3a4f3}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[StopPressed := Not StopPB;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="StopReleased" Id="{a959fde0-2f50-4bdf-b9f8-d993972731d7}">
+      <Declaration><![CDATA[PROPERTY PUBLIC StopReleased : Bool]]></Declaration>
+      <Get Name="Get" Id="{52a16103-10c4-4b8f-a8d1-9a40bdc5eb4b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[StopPressed := Not StopPressed;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <LineIds Name="SlitterMainOperatorPanel">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StartLightOff">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StartLightOn">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StartPressed.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StartReleased.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StopLightOff">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StopLightOn">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StopPressed.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="SlitterMainOperatorPanel.StopReleased.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_LIGHT" Id="{4d9d1918-5b33-47ec-8716-3a268df7d304}">
+    <Declaration><![CDATA[INTERFACE I_LIGHT
+]]></Declaration>
+    <Method Name="Off" Id="{a800c40d-1265-499e-be2e-d11b1168d657}">
+      <Declaration><![CDATA[METHOD Off
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="On" Id="{a351c6d1-99ba-4366-bc04-9cafc55968ec}">
+      <Declaration><![CDATA[METHOD On
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_PushButton" Id="{9e081302-dc6f-421f-bc5f-e6b82b29087e}">
+    <Declaration><![CDATA[INTERFACE I_PushButton
+]]></Declaration>
+    <Property Name="IsPressed" Id="{6c970cda-44f8-40e1-96ea-73fe00a64d82}">
+      <Declaration><![CDATA[PROPERTY IsPressed : BOOL]]></Declaration>
+      <Get Name="Get" Id="{42be6383-e587-45fc-bd16-2c5fc18238ac}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+    <Property Name="IsReleased" Id="{2084f9a3-fb91-4c4d-b457-66486477cc5d}">
+      <Declaration><![CDATA[PROPERTY IsReleased : BOOL]]></Declaration>
+      <Get Name="Get" Id="{81d7c99d-c9a5-4fe9-9103-1800310de06c}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+  </Itf>
+</TcPlcObject>

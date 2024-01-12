@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Light" Id="{b25df339-94d3-426f-8e7f-5b55729b3085}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Light IMPLEMENTS I_LIGHT
+
+VAR
+	Output AT %Q* : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Off" Id="{aeeae483-b9c9-44b1-90c3-e0e30d82e26e}">
+      <Declaration><![CDATA[METHOD Off
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Output := FALSE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="On" Id="{ca8880a9-66d8-4f04-930a-a751876446b3}">
+      <Declaration><![CDATA[METHOD On
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Output := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="Light">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Light.Off">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Light.On">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
